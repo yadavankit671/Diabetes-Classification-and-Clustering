@@ -7510,7 +7510,19 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fcf75514">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=aa87b014">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Diabetes-Classification-and-Clustering-Analysis">Diabetes Classification and Clustering Analysis<a class="anchor-link" href="#Diabetes-Classification-and-Clustering-Analysis">¶</a></h1><p>This notebook explores a diabetes dataset using both supervised classification and unsupervised clustering. The workflow includes data preparation, exploratory analysis, feature assessment, model training, clustering, and a comparison of the two approaches.</p>
+<h2 id="1.-Libraries-and-dependencies">1. Libraries and dependencies<a class="anchor-link" href="#1.-Libraries-and-dependencies">¶</a></h2><p>The analysis starts by importing the libraries needed for data handling, visualization, preprocessing, modeling, and evaluation.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fcf75514">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7539,6 +7551,17 @@ a.anchor-link {
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">,</span> <span class="n">adjusted_rand_score</span><span class="p">,</span> <span class="n">normalized_mutual_info_score</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=58e39e39">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="2.-Data-ingestion">2. Data ingestion<a class="anchor-link" href="#2.-Data-ingestion">¶</a></h2><p>Load the dataset and inspect the first rows, schema, and sample records to confirm the structure before any cleaning or modeling.</p>
 </div>
 </div>
 </div>
@@ -7735,6 +7758,17 @@ dtypes: float64(8), int64(4), object(2)
 memory usage: 109.5+ KB
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25bfa80c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="3.-Data-cleaning-and-preprocessing">3. Data cleaning and preprocessing<a class="anchor-link" href="#3.-Data-cleaning-and-preprocessing">¶</a></h2><p>Remove unneeded columns, normalize labels, handle duplicates, and inspect invalid values so the data is ready for modeling.</p>
 </div>
 </div>
 </div>
@@ -8355,6 +8389,17 @@ Invalid values in Chol:
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5826b4ec">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="4.-Exploratory-data-analysis">4. Exploratory data analysis<a class="anchor-link" href="#4.-Exploratory-data-analysis">¶</a></h2><p>Explore class balance, distributions, relationships, and correlation patterns to understand the healthcare features and the signals driving the target class.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d41ad90a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8607,6 +8652,17 @@ Name: proportion, dtype: float64
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b829b150">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="5.-Model-building-and-training">5. Model building and training<a class="anchor-link" href="#5.-Model-building-and-training">¶</a></h2><p>Create the target and feature variables, split the dataset, standardize inputs, and train several classifiers along with an artificial neural network for comparison.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=68e4c61d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8797,6 +8853,17 @@ Name: proportion, dtype: float64
 <span class="p">}</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=96806a4e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="6.-Classification-results">6. Classification results<a class="anchor-link" href="#6.-Classification-results">¶</a></h2><p>Evaluate the trained classifiers using accuracy and macro-average metrics, and review confusion matrices and performance comparisons to identify the strongest model.</p>
 </div>
 </div>
 </div>
@@ -9252,6 +9319,17 @@ dtype: float64
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c7e9c514">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="7.-Clustering">7. Clustering<a class="anchor-link" href="#7.-Clustering">¶</a></h2><p>Reduce dimensionality with PCA and apply unsupervised learning algorithms to identify latent groups in the diabetes data without using the class labels.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d51edfd6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9333,6 +9411,17 @@ Exact Variance Retained: 93.08%
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1040b3b2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="8.-Clustering-results">8. Clustering results<a class="anchor-link" href="#8.-Clustering-results">¶</a></h2><p>Measure cluster quality using Adjusted Rand Index and Normalized Mutual Information to compare how well each clustering algorithm aligns with the known class labels.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7627af2a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9381,6 +9470,17 @@ Agglomerative      0.537      0.348
       HDBSCAN      0.004      0.012
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=000ba525">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="9.-Classification-vs-clustering-comparison">9. Classification vs clustering comparison<a class="anchor-link" href="#9.-Classification-vs-clustering-comparison">¶</a></h2><p>Compare supervised and unsupervised approaches side by side to understand their differences in performance and how clustering structure relates to the labeled diabetes classes.</p>
 </div>
 </div>
 </div>
@@ -9573,6 +9673,17 @@ Agglomerative      0.537      0.348
 Best clustering algorithm by ARI: Agglomerative (0.537 ARI)
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ab576b63">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="10.-Error-analysis">10. Error analysis<a class="anchor-link" href="#10.-Error-analysis">¶</a></h2><p>Inspect incorrect predictions to identify which patient patterns are hardest for the classifier and which features contribute most to misclassification.</p>
 </div>
 </div>
 </div>
